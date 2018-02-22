@@ -1,0 +1,33 @@
+{
+  "name": "hotmodulereplacementtutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-dev": "webpack -d --config ./webpack.dev.config.js --watch & webpack-dev-server --config ./webpack.dev.config.js",
+    "server-dev": "webpack -d --config ./webpack.dev.config.js & nodemon server/index.js",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pa87901/hotModuleReplacementTutorial.git"
+  },
+  "author": "Preda A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pa87901/hotModuleReplacementTutorial/issues"
+  },
+  "homepage": "https://github.com/pa87901/hotModuleReplacementTutorial#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
