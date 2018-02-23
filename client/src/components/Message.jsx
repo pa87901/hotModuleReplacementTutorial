@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Message = ({ message }) => (
   <div className="feed">
     { message }
-    <div>Goodbye world</div>
+    <div>Goodbye world!</div>
     <div>See you ...</div>
   </div>
 );
