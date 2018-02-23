@@ -3,7 +3,7 @@ import Message from './Message';
 
 const App = () => (
   <div>
-    <h1>Hot Module Replacement Tutorial</h1>
+    <h1>Hot Module Replacement Tutorial Now</h1>
     <Message message="Hello World" />
   </div>
 );

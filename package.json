@@ -5,8 +5,7 @@
   "main": "./server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client-dev": "webpack -d --config ./webpack.dev.config.js --watch & webpack-dev-server --config ./webpack.dev.config.js",
-    "server-dev": "webpack -d --config ./webpack.dev.config.js & nodemon server/index.js",
+    "start": "NODE_ENV=server nodemon server/index.js",
     "build": "webpack -p"
   },
   "repository": {
@@ -25,9 +24,18 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
     "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.1.3",
+    "webpack": "^3.11.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.11.1",
+    "webpack-dev-middleware": "^2.0.6",
+    "webpack-hot-middleware": "^2.21.0"
   }
 }

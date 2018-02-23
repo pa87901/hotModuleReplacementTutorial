@@ -1,5 +1,33 @@
 {
-  "presets": [
-    "react"
-  ]
+  "presets": [ // presets are just a group of plugins
+    "react",
+    ["env", { // the babel preset env
+      "targets": {
+        "browsers": "last 2 versions",
+        "node": "current" // allows jest to be used in node
+      },
+      "loose": true, // saying, "I'm not doing very crazy stuff with edge cases. Go ahead and include the smaller bit of code rather than the huge bit."
+      "modules": false // telling babel to not transpile the modules as we are using webpack2 (ES6 enabled) which will deal with it
+    }]
+  ],
+  "plugins": [
+    "react-hot-loader/babel" // this top level property is required for hot module reload. It will make the joints that the HMR knows where to cut off and reinsert itself in.
+    // "transform-object-rest-spread" // useful for Redux where we use spread operator to create new object from existing state obj
+    // ["transform-runtime", {
+    //   "polyfill": false,
+    //   "regenerator": true
+    // }]
+  ],
+  "env": { // doing different transformations based on environment variables
+    "test": { // for tests to be able to use ES6 | when node env = test then run this plugin
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    },
+    "server": { //For Node to understand how to do ES6 modules
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
 }
