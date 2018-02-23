@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: DIST_DIR,
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   devServer: {
     hot: true,
@@ -35,6 +35,12 @@ module.exports = {
   ],
   module: {
     loaders: [
+      {
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.jsx$/,
         loader: 'babel-loader',
