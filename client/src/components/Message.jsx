@@ -5,6 +5,7 @@ const Message = ({ message }) => (
   <div className="feed">
     { message }
     <div>Goodbye world</div>
+    <div>See you ...</div>
   </div>
 );
 
